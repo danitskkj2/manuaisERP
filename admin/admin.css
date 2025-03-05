@@ -1,0 +1,156 @@
+/* Importando fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3DB859;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container principal */
+.admin-container {
+    width: 90%;
+    max-width: 1024px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+/* Cabeçalho e botões */
+h2 {
+    text-align: center;
+}
+
+.pesquisa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.pesquisa input {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #008f26;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.btn:hover {
+    background-color: #005E19;
+}
+
+/* Botões de ação */
+.edit-button {
+    background-color: #ffc107;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Botão de logout */
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #005E19;
+    color: white;
+}
+
+th {
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .pesquisa {
+        flex-direction: column;
+    }
+    
+    .pesquisa input {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    td::before {
+        font-weight: bold;
+        color: #005E19;
+    }
+
+    td:nth-of-type(1)::before { content: "Nome: "; }
+    td:nth-of-type(2)::before { content: "Módulo: "; }
+    td:nth-of-type(3)::before { content: "Ações: "; }
+}

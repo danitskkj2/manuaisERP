@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    overflow-x: hidden;
+    size: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Roboto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3DB859;
+}
+
+header {
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #005E19;
+}
+
+header img {
+    height: 100px;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+}
+
+#search {
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#search:focus {
+    outline-color: #005E19;
+    border-color: #005E19;
+}
+
+#search::placeholder {
+    color: #000;
+}
+main {
+    flex: 1;
+    background-color: #ffff;
+    width: 90%;
+    max-width: 1024px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#doc {
+    height: 15px;
+    width: auto;
+}
+
+strong {
+    font-size: 18px;
+}
+
+.seta {
+    width: 15px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.setaVirada {
+    transform: rotate(90deg);
+}
+
+.sub-lista {
+    padding-left: 30px;
+    display: none;
+}
+
+.sub-lista li {
+    padding: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #005E19;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: #000;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+}
+
+.resultado {
+    text-align: center;
+    list-style: none;
+}
+
+#nResultado {
+    text-align: center;
+    font-size: 18px;
+}
