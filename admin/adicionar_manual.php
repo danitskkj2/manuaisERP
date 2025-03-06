@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_FILES['arquivo']['error'] === UPLOAD_ERR_OK) {
         $arquivo = $_FILES['arquivo']['name'];
         $extensao = pathinfo($arquivo, PATHINFO_EXTENSION);
-        $extensoes_permitidas = ['pdf', 'docx', 'pptx']; // Extensões permitidas
+        $extensoes_permitidas = ['pdf', 'docx', 'pptx', 'txt']; // Extensões permitidas
 
         if (in_array($extensao, $extensoes_permitidas)) {
             // Move o arquivo para o diretório de manuais
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "❌ Erro ao mover o arquivo para o diretório de manuais.";
             }
         } else {
-            echo "❌ Tipo de arquivo não permitido. Apenas PDF, DOCX e PPTX são aceitos.";
+            echo "❌ Tipo de arquivo não permitido. Apenas PDF, DOCX, TXT e PPTX são aceitos.";
         }
     } else {
         echo "❌ Erro no envio do arquivo.";
